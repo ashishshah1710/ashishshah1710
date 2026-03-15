@@ -1,16 +1,19 @@
-## Hi there 👋
+# Hi, I'm Ashish Shah
 
-<!--
-**ashishshah1710/ashishshah1710** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Backend Engineer at **Amdocs** with 3.5+ years building scalable microservices for telecom platforms.
 
-Here are some ideas to get you started:
+## Tech Stack
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat&logo=apache-kafka&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Featured Projects
+- [Distributed URL Shortener](link) — High-throughput URL shortening with Redis + PostgreSQL
+- [Real-Time Notification Service](link) — Event-driven alerts via Kafka + WebSocket
+- [Expense Tracker API](link) — REST API with JWT auth, RBAC, and Swagger docs
+
+## Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ashishshah1710&show_icons=true&theme=tokyonight)

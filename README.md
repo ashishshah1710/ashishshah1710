@@ -1,6 +1,6 @@
 # Hi, I'm Ashish Shah
 
-Backend Engineer at **Amdocs** with 3.7+ years building scalable microservices for telecom platforms.
+Backend Engineer at **Amdocs** with almost 4 years building scalable microservices for telecom platforms.
 
 ## Tech Stack
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)

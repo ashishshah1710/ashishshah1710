@@ -1,0 +1,303 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1 cm,
+    bottom=2 cm,
+    left=1.5 cm,
+    right=1.5 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Ashish Shah Resume},
+    pdfauthor={Ashish Shah},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\makeatother
+\pagestyle{empty}
+
+\titleformat{\section}{\needspace{2\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.15 cm}{0.15 cm}
+
+\renewcommand\labelitemi{\textcolor{black}{$\bullet$}}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newcommand{\projectstart}[3]{%
+    \begin{onecolentry}%
+    \setcolumnwidth{\fill, 4.5 cm}%
+    \begin{paracol}{2}%
+    \setlength{\parskip}{0pt}%
+    #2%
+    \switchcolumn\raggedleft #1%
+    \end{paracol}%
+    \vspace{2pt}%
+    \noindent #3\par%
+    \vspace{4pt}%
+    \begin{itemize}[
+        topsep=0pt,
+        parsep=0.03 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]%
+}
+\newcommand{\projectend}{%
+    \end{itemize}%
+    \end{onecolentry}%
+    \vspace{0.06 cm}%
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+    \setlength{\parskip}{0pt}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{}}}%
+  }%
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\hyphenation{PostgreSQL Postgres}
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Ashish Shah}
+
+        \vspace{0.05cm}
+
+    \normalsize
+    {\color{black}\footnotesize\faMapMarker* \hspace{0.13cm}Pune, India} \quad
+    {\color{black}\footnotesize\faEnvelope[regular] \hspace{0.13cm}\href{mailto:ashishshah171097@gmail.com}{ashishshah171097@gmail.com}} \quad
+    {\color{black}\footnotesize\faPhone* \hspace{0.13cm}\href{tel:+91-8878482241}{8878482241}} \quad
+    {\color{black}\footnotesize\faLinkedinIn \hspace{0.13cm}\href{https://www.linkedin.com/in/ashishshah1710}{Ashish Shah}} \quad
+    {\color{black}\footnotesize\faGithub \hspace{0.13cm}\href{https://github.com/ashishshah1710}{GitHub}}
+
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+    \section{Summary}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+           Software Developer with \textbf{almost 4 years of experience} at \textbf{Amdocs Development Center India}, building scalable microservices for telecom billing and customer migration (\textbf{5M+ transactions/month}). Leading \textbf{USCC--T-Mobile} integration with \textbf{Java, Spring Boot, Apache Camel (Red Hat Fuse), Quarkus, REST/SOAP}, and \textbf{IBM API Connect} on \textbf{OpenShift/Kubernetes}. Strong in CI/CD (GitLab, Jenkins), observability (Prometheus/Grafana, Splunk/Kibana), and production cutover support.
+        \end{onecolentry}
+
+   \section{Technical Skills}
+        \vspace{0.05 cm}
+        \begin{onecolentry}
+            \begin{itemize}[topsep=0pt, parsep=0.03cm, itemsep=0pt, partopsep=0pt, leftmargin=10pt]
+                \item \textbf{Languages:} Java, SQL, C++
+                \item \textbf{Integration \& Backend:} Apache Camel (Red Hat Fuse), Quarkus, Spring Boot, REST/SOAP, XML/JSON, Microservices, IBM API Connect, Enterprise Integration, SOA, Swagger, Maven
+                \item \textbf{Messaging \& Data:} Apache Kafka, PostgreSQL, MySQL, MongoDB, Couchbase, Hibernate
+                \item \textbf{Cloud \& DevOps:} Docker, Kubernetes, OpenShift, AWS, GitLab CI/CD, Jenkins, Linux
+                \item \textbf{Monitoring \& Tools:} Prometheus, Grafana, Splunk, Kibana, Postman, WireMock, Jira, Git
+            \end{itemize}
+        \end{onecolentry}
+
+      \section{Experience}
+     \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+        \text{Jul 2024 -- Present}
+
+        \text{Pune, India}}
+            \textbf{Amdocs Development Center India}\\[2pt]
+            \text{Software Developer - Experienced}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item \textit{USCC Integration (T-Mobile -- USCellular Acquisition):} Designed and developed integration microservices using \textbf{Apache Camel (Red Hat Fuse)} and Quarkus on \textbf{OpenShift}, exposing \textbf{REST/SOAP} APIs via \textbf{IBM API Connect} for large-scale customer migration.
+
+            \item Implemented and managed \textbf{GitLab CI/CD pipelines} for automated builds, integration tests, and OpenShift deployments; maintained technical documentation for integration flows and release sign-off.
+
+            \item \textit{XL Axiata Jakarta (Indonesian Telecom):} Led C1/D1 platform upgrade; built \textbf{Prometheus/Grafana} monitoring dashboards that cut mean incident detection from \textbf{45 min to under 5 min}.
+
+            \item Designed XML/JSON contract transformations and integration patterns between Amdocs and external carrier systems, ensuring scalability and reliability across \textbf{3 cross-functional teams}.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+        \text{Apr 2026 -- May 2026}
+
+        \text{Guadalajara, Mexico}}
+            \textbf{Amdocs Development Center India}\\[2pt]
+            \text{Software Developer - Onsite}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item \textit{USCC to T-Mobile transition (onsite):} Led production deployment, cutover support, and post-go-live stabilization of Quarkus/Camel integration services during the acquisition migration.
+
+            \item Provided L2/L3 production support: triaged live incidents, coordinated UAT sign-off, and partnered with client and carrier teams on integration testing and release readiness.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{twocolentry}{
+        \text{Jul 2022 -- Jun 2024}
+
+        \text{Pune, India}}
+            \textbf{Amdocs Development Center India}\\[2pt]
+            \text{Software Developer}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item \textit{Turbo Charging (Telecom Billing Platform):} Developed and enhanced Spring Boot microservices integrated with PostgreSQL, Hibernate, and Kafka, handling \textbf{5M+ transactions/month} at \textbf{99.9\% uptime}.
+
+            \item Built asynchronous event-driven pipelines consuming Kafka topics for real-time billing, introducing new APIs per business requirements for catalog and subscription workflows.
+
+            \item \textit{Versionless (R \& D):} Engineered a custom WireMock mapping framework that reduced API mock setup time by \textbf{60\%}, and built Rest Assured component tests and Scala performance tests raising coverage to \textbf{90\%}.
+
+            \item Triaged \textbf{30+ critical production issues} (2 quarters), cutting incident volume by \textbf{60\%}; automated GitLab CI/CD and Docker/Kubernetes releases from weekly manual deploys to \textbf{daily deployments}.
+            \end{highlights}
+        \end{onecolentry}
+
+\section{Education}
+ \vspace{0.10 cm}
+        \begin{twocolentry}{
+        \text{July 2019 -- June 2022}}
+            \textbf{National Institute of Technology, Warangal}\\[2pt]
+            \text{Master of Computer Applications -- CGPA: 7.89/10}
+        \end{twocolentry}
+    \vspace{0.10 cm}
+        \begin{twocolentry}{
+        \text{June 2016 -- July 2019}}
+            \textbf{Devi Ahilya Vishwavidyalaya, Indore}\\[2pt]
+            \text{Bachelor of Computer Science -- 69\%}
+        \end{twocolentry}
+
+\section{Projects}
+        \vspace{0.06 cm}
+
+        \projectstart{\text{\href{https://github.com/ashishshah1710/distributed-url-shortener}{GitHub}}}{\textbf{Distributed URL Shortener}}{\textit{Java 17, Spring Boot 3, Redis, Postgres, Docker}}
+        \item Versioned REST API with \textbf{Redis INCR + Base62} IDs, \textbf{cache-aside} redirects, and Postgres persistence; optional custom aliases and TTL (1--365 days).
+        \item \textbf{Async click analytics} on redirect; per-IP \textbf{Bucket4j} rate limiting; \textbf{OpenAPI/Swagger} docs; Docker Compose stack validated with \textbf{Testcontainers}.
+        \projectend
+
+        \projectstart{\text{\href{https://github.com/ashishshah1710/realtime-notification-service}{GitHub}}}{\textbf{Real-Time Notification Service}}{\textit{Java 17, Spring Boot 3, Kafka, WebSocket, Postgres}}
+        \item Event-driven pipeline: REST publish returns \textbf{202 Accepted} to Kafka; \textbf{3 concurrent consumers} with manual offset commit and JSON events.
+        \item Multi-channel dispatcher (\textbf{WebSocket, email, SMS}) with Postgres status, \textbf{retry/DLT}, OpenAPI, and Docker Compose (Kafka, Postgres); REST APIs for publish, history, and delivery status.
+        \projectend
+
+        \projectstart{\text{\href{https://github.com/ashishshah1710/expense-tracker}{GitHub}}}{\textbf{Expense Tracker REST API}}{\textit{Java 17, Spring Boot 3, Spring Security, JWT, Postgres}}
+        \item JWT-secured expense CRUD with admin-wide and user-scoped access; paginated APIs with category, date, and amount filters.
+        \item Jakarta Bean Validation, \texttt{@RestControllerAdvice} errors (400--409), \textbf{OpenAPI/Swagger} (Bearer JWT), \textbf{11 Testcontainers} tests, Docker Compose.
+        \projectend
+
+\section{Certifications}
+        \vspace{0.06 cm}
+        \begin{onecolentry}
+            \begin{itemize}[topsep=0pt, parsep=0.03cm, itemsep=0pt, partopsep=0pt, leftmargin=10pt]
+                \item \textbf{Intro to AI Agents and Agentic AI} -- Udemy \hfill \href{https://ude.my/UC-ec0c4fa0-2139-4010-9a43-307a21b80469}{Verify}
+                \item \textbf{Generative AI for Beginners} -- Udemy \hfill Oct 2024
+                \item \textbf{Java (Intermediate) Certificate} -- HackerRank \hfill \href{https://www.hackerrank.com/certificates/937796B79A73}{Verify}
+            \end{itemize}
+        \end{onecolentry}
+
+\end{document}
